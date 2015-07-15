@@ -78,7 +78,9 @@ namespace PresentationMode
             ErrorHandler.ThrowOnFailure(storage.OpenCategory(category, (uint)(__FCSTORAGEFLAGS.FCSF_LOADDEFAULTS | __FCSTORAGEFLAGS.FCSF_PROPAGATECHANGES)));
             try
             {
-                ErrorHandler.ThrowOnFailure(storage.GetFont(pLOGFONT, pInfo));
+                if (!ErrorHandler.Succeeded(storage.GetFont(pLOGFONT, pInfo)))
+                    return;
+
                 pInfo[0].wPointSize = checked((ushort)(pInfo[0].wPointSize + change));
                 ErrorHandler.ThrowOnFailure(storage.SetFont(pInfo));
                 ErrorHandler.ThrowOnFailure(utilities.FreeFontInfo(pInfo));
