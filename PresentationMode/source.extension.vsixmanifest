@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="PresentationMode.af952801-4742-4c45-bd61-e08b17ae1d7d" Version="1.0.1" Language="en-US" Publisher="Sam Harwell" />
+    <Identity Id="PresentationMode.af952801-4742-4c45-bd61-e08b17ae1d7d" Version="1.0.2" Language="en-US" Publisher="Sam Harwell" />
     <DisplayName>Presentation Mode</DisplayName>
     <Description xml:space="preserve">A presentation mode for Visual Studio.</Description>
     <License>LICENSE</License>
