@@ -30,7 +30,7 @@
     called "command set" and is used to group different command inside a logically related  
     group; your package should define its own command set in order to avoid collisions  
     with command ids defined by other packages. -->
-    
+
     <!-- In this section you can define new menu groups. A menu group is a container for 
          other menus or buttons (commands); from a visual point of view you can see the 
          group as the part of a menu contained between two lines. The parent of a group 
@@ -40,7 +40,7 @@
         <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />
       </Group>
     </Groups>
-    
+
     <!--Buttons section. -->
     <!--This section defines the elements the user can interact with, like a menu command or a button 
         or combo box in a toolbar. -->
@@ -59,8 +59,15 @@
           <ButtonText>Increase Font Size</ButtonText>
         </Strings>
       </Button>
-    <Button guid="guidIncreaseFontSizePackageCmdSet" id="cmdidDecreaseFontSize" priority="0x0100" type="Button"><Parent guid="guidIncreaseFontSizePackageCmdSet" id="MyMenuGroup" /><Icon guid="guidImages1" id="bmpPic1" /><Strings><ButtonText>Invoke DecreaseFontSize</ButtonText></Strings></Button></Buttons>
-    
+      <Button guid="guidIncreaseFontSizePackageCmdSet" id="cmdidDecreaseFontSize" priority="0x0100" type="Button">
+        <Parent guid="guidIncreaseFontSizePackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages1" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Invoke DecreaseFontSize</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
     <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
     <Bitmaps>
       <!--  The bitmap id is defined in a way that is a little bit different from the others: 
@@ -69,19 +76,21 @@
             inside a button definition. An important aspect of this declaration is that the element id 
             must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
       <Bitmap guid="guidImages" href="Resources\IncreaseFontSize.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
-    <Bitmap guid="guidImages1" href="Resources\DecreaseFontSize.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" /></Bitmaps>
+      <Bitmap guid="guidImages1" href="Resources\DecreaseFontSize.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+    </Bitmaps>
   </Commands>
-  
+
   <Symbols>
     <!-- This is the package guid. -->
     <GuidSymbol name="guidIncreaseFontSizePackage" value="{a2be25c9-3e84-47c5-af2e-f0eeef2f0a84}" />
-    
+
     <!-- This is the guid used to group the menu commands together -->
     <GuidSymbol name="guidIncreaseFontSizePackageCmdSet" value="{907712e3-9ec2-4bdb-a38a-904088d1bd7f}">
       <IDSymbol name="MyMenuGroup" value="0x1020" />
       <IDSymbol name="IncreaseFontSizeId" value="0x0100" />
-    <IDSymbol value="4129" name="cmdidDecreaseFontSize" /></GuidSymbol>
-    
+      <IDSymbol value="4129" name="cmdidDecreaseFontSize" />
+    </GuidSymbol>
+
     <GuidSymbol name="guidImages" value="{d0188c2b-a323-4c29-9cf5-556e3e0ff33f}">
       <IDSymbol name="bmpPic1" value="1" />
       <IDSymbol name="bmpPic2" value="2" />
@@ -90,5 +99,13 @@
       <IDSymbol name="bmpPicArrows" value="5" />
       <IDSymbol name="bmpPicStrikethrough" value="6" />
     </GuidSymbol>
-  <GuidSymbol value="{95bd0dee-7671-4ec6-ba83-14b1a9f24b5c}" name="guidImages1"><IDSymbol name="bmpPic1" value="1" /><IDSymbol name="bmpPic2" value="2" /><IDSymbol name="bmpPicSearch" value="3" /><IDSymbol name="bmpPicX" value="4" /><IDSymbol name="bmpPicArrows" value="5" /><IDSymbol name="bmpPicStrikethrough" value="6" /></GuidSymbol></Symbols>
+    <GuidSymbol value="{95bd0dee-7671-4ec6-ba83-14b1a9f24b5c}" name="guidImages1">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  </Symbols>
 </CommandTable>
