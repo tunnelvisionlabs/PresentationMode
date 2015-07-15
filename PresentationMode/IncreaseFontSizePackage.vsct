@@ -63,7 +63,7 @@
         <Parent guid="guidIncreaseFontSizePackageCmdSet" id="MyMenuGroup" />
         <Icon guid="guidImages1" id="bmpPic1" />
         <Strings>
-          <ButtonText>Invoke DecreaseFontSize</ButtonText>
+          <ButtonText>Decrease Font Size</ButtonText>
         </Strings>
       </Button>
     </Buttons>
